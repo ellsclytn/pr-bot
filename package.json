@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "lint": "standard"
   },
   "author": "Ellis Clayton <ellis@ellisclayton.info>",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mqtt": "^2.0.0"
+  },
+  "devDependencies": {
+    "standard": "^8.1.0"
   }
 }
