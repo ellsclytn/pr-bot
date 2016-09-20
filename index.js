@@ -19,7 +19,7 @@ const mqOptions = {
 const client = mqtt.connect(process.env.MQTT_URL, mqOptions)
 
 client.on('connect', () => {
-  client.publish('Connected', 'connected')
+  client.publish('connection', 'connected')
 })
 
 app.post('/', (req, res) => {
