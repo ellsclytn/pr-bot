@@ -62,7 +62,7 @@ app.post('/', (req, res) => {
       return res.sendStatus(200)
     } else if (!unresponded) {
       // Cleared PRs
-      client.publish('pr', '1', () => res.sendStatus(200))
+      client.publish('pr', '0', () => res.sendStatus(200))
       return res.sendStatus(200)
     } else {
       // No change
