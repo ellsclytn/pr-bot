@@ -32,7 +32,7 @@ const scanPrs = (messages) => {
       (m) => (m.ts === reply.ts)
     )).filter(r => r)
     .filter((reply) => (
-      reply.text.startsWith(':merged:') || reply.text.startsWith(':closed:')
+      reply.text.includes(':merged:') || reply.text.includes(':closed:')
     ))
 
     return message
