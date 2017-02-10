@@ -56,7 +56,7 @@ app.post('/', (req, res) => {
   }}).then((response) => (response.data.messages))
   .then((messages) => (scanPrs(messages)))
   .then((unresponded) => {
-    if (unresponded && req.body.text === ':pr:') {
+    if (unresponded && req.body.text.startsWith(':pr:')) {
       // New PR
       client.publish('pr', '1', () => res.sendStatus(200))
       return res.sendStatus(200)
