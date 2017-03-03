@@ -59,11 +59,9 @@ app.post('/', (req, res) => {
     if (unresponded && req.body.text.startsWith(':pr:')) {
       // New PR
       client.publish('pr', '1', () => res.sendStatus(200))
-      return res.sendStatus(200)
     } else if (!unresponded) {
       // Cleared PRs
       client.publish('pr', '0', () => res.sendStatus(200))
-      return res.sendStatus(200)
     } else {
       // No change
       return res.sendStatus(200)
