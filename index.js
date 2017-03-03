@@ -40,6 +40,7 @@ const scanPrs = (messages) => {
 
   const unresponded = prMessages.filter(({replies}) => !replies.length).length
 
+  console.log('UNRESPONDED', unresponded)
   return unresponded
 }
 
